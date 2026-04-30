@@ -1,0 +1,24 @@
+# Normalize line endings across Mac, Linux, Windows checkouts.
+# All text files use LF in the repo; Git converts on checkout where needed.
+
+* text=auto eol=lf
+
+# Windows-only scripts keep CRLF
+*.bat   text eol=crlf
+*.ps1   text eol=crlf
+*.cmd   text eol=crlf
+
+# Treat these as binary so Git doesn't mangle them
+*.mp4   binary
+*.mov   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.zip   binary
+*.tgz   binary
+*.tar   binary
+*.gz    binary
+*.db    binary
+*.sqlite binary

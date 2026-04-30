@@ -1,0 +1,35 @@
+# VidPost Configuration
+# Copy to ~/.vidpost/config.yaml and fill in your credentials
+
+# YouTube — requires Google Cloud project with YouTube Data API v3
+youtube:
+  client_secret_path: ~/.vidpost/youtube_client_secret.json
+  default_privacy: unlisted   # public | unlisted | private
+  default_category: 22        # 22 = People & Blogs
+
+# Facebook — requires Meta for Developers app with Pages product
+facebook:
+  app_id: "YOUR_APP_ID"
+  app_secret: "YOUR_APP_SECRET"
+  page_id: "YOUR_PAGE_ID"
+
+# TikTok — requires TikTok for Developers app with Content Posting API
+tiktok:
+  client_key: "YOUR_CLIENT_KEY"
+  client_secret: "YOUR_CLIENT_SECRET"
+
+# Caption Generation (all local — no API costs)
+captions:
+  whisper_model: base          # tiny | base | small | medium | large
+  num_keyframes: 5             # Frames to extract for visual analysis
+  num_options: 3               # Caption options to generate
+  style_guide_path: ~/.vidpost/style_guide.yaml
+
+# Defaults
+defaults:
+  platforms:
+    - youtube
+    - facebook
+    - tiktok
+  timezone: America/Los_Angeles
+  hashtag_style: inline        # inline (in caption) or separate
